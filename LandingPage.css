@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 75.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-image: url(ad1.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: Verdana, sans-serif;
+
+    /*
+    background: linear-gradient(270deg, #edf0f8, #d2d0d4, #c0bfc2, #c2bac7);
+    
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    } */
+}
+p{
+    color: white;
+ 
+    
+}
+h1, h3{
+    color: #fff;
+}
+.one{
+    text-align: center;
+    font-size: 13px;
+   
+   
+}
+
+#one1{
+    margin-top: 220px;
+    
+}
+#one2{
+    margin-top: 250px;
+}
+#one3{
+    margin-top: 225px;
+    
+}
+#one4{
+    margin-top: 240px;
+  
+  
+}
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10px;
+
+}
+.logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.6s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: white;
+    border-bottom: 3px solid white;
+    font-size: 2.0rem;
+}
+
+
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    
+    
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: white;
+    font-style: italic;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.6rem;
+   
+}
+.home-img{
+    border-radius: 70%;
+    
+}
+.card{
+    width: 220px;
+    height: 310px;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 25px 25px;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+    position: relative;
+   
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.card ::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), black, white);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.card ::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+
+.card1{
+    background-image: url(gojo2.jpg);
+   
+}
+.card2{
+    background-image: url(onepiece.jpg);
+    
+}
+.card3{
+    background-image: url(itachibogo.jpg);
+   
+}
+.card4{
+    background-image: url(goku.jpg);
+    
+}
+.card:hover{
+  
+   /* transform: translateY(-10px);*/
+}
+.home-img img{
+    border-radius: 20%;
+    position: relative;
+    width: 15vw;
+    box-shadow: 0 0 25px solid black;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid white;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: white;
+}
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3)translateY(-5px);
+    background-color: white;
+    box-shadow: 0 0 25px;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 25px black;
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{
+    content: 'Software Developer';
+    color: white;
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% +8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid white;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Manga";
+    }
+    21%, 40% {
+        content: "Shonen";
+    }
+    41%, 60% {
+        content: "Shojo";
+    }
+    61%, 80% {
+        content: "Otaku";
+    }
+    81%, 100% {
+        content: "Isekai";
+    }
+}
+
+.footer {
+    background: linear-gradient(45deg, rgb(156, 151, 151), rgb(75, 70, 70), rgb(24, 23, 23));
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+    height: 18% ;
+}
+
+.footer .footer-links {
+    margin-bottom: 20px;
+}
+
+.footer .footer-links a {
+    margin: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.footer .footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    left: 50%;
+    bottom: -5px;
+    transition: 0.4s ease;
+}
+
+.footer .footer-links a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.footer .footer-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.footer .social-icons {
+    margin-top: 15px;
+}
+
+.footer .social-icons a {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: black;
+    transform: translateY(-5px);
+}
+
+.footer .social-icons a i {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+.search-container label {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: #f7f5f5;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #fcfdfd;
+    box-shadow: 0 0 8px rgb(251, 253, 255);
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #888;
+}
+
+
